@@ -1,0 +1,32 @@
+:root{
+  --blue : #264558;
+  --orange:#FDD326;
+}
+
+.h100{
+  height: 100vh;
+}
+
+.w100{
+  width: 80%;
+}
+
+.bg-blue{
+  
+  background-color: #F4F8F9;
+}
+
+.font-8{
+  font-weight: 800;
+  border-bottom: 2px solid var(--blue);
+  border-radius: 15px;
+}
+
+.btn-color{
+  background-color: var(--orange);
+  color: var(--blue);
+}
+
+.hide{
+  display: none;
+}
