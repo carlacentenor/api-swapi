@@ -6,13 +6,7 @@ btnWelcome.on('click',function(){
 });
 
 // función para ingresar imágenes
-(function() {
-  images.forEach(function(element,index){
-    const template = `<div class="col-3 p-2 border text-center data-name="${index+1}">
-                      <img class="w100" src="../assets/images/${element}.png" alt="${index+1}"></div>`;
-      imagesBox.append(template);
-  }); 
-})();
+
 
 
 
