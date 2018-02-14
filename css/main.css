@@ -1,3 +1,12 @@
+@font-face {
+  font-family:starwars;
+  src: url('../assets/fonts/Starjedi.ttf');
+}
+h2{
+  font-family: starwars;
+  color: var(--blue);
+}
+
 :root{
   --blue : #264558;
   --orange:#FDD326;
@@ -8,6 +17,10 @@
 }
 
 .w100{
+  width: 100%;
+}
+
+.w80{
   width: 80%;
 }
 
@@ -30,3 +43,4 @@
 .hide{
   display: none;
 }
+
