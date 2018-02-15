@@ -25,8 +25,9 @@ getPersonage = () => {
 addPersonage = (array) => {
   array.forEach((element) => {
     const template = `
-    <div>
+    <div class="col-md-4">
     <p>${element.name}</p>
+    <img src="none" name="${element.name}">
     </div>
     `;
     imagesBox.append(template);
