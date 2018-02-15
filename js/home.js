@@ -12,7 +12,7 @@ getPersonage = () => {
     if (personageStar.readyState === 4 && personageStar.status === 200) {
       const data = JSON.parse(this.responseText);
       let dataArray = data.results;
-      console.log(data);
+      
       resultLength = data.results.length;
       personageStar.onload = addPersonage(dataArray);
       personageStar.onerror = handleError;
@@ -23,17 +23,18 @@ getPersonage = () => {
 }
 
 addPersonage = (array) => {
-  array.forEach((element) => {
+  array.forEach((element,index) => {
     const template = `
-    <div class="col-md-4">
+    <div class="col-md-4 stars" data-name="${index+1}" data-toggle="modal" data-target="#exampleModal">
     <p>${element.name}</p>
-    <img src="none" name="${element.name}">
+    <img src="" name="${element.name}">
     </div>
     `;
     imagesBox.append(template);
-    console.log(element.name);
+   
   })
 };
+
 
 handleError = error => {
   console.log(error);
@@ -41,3 +42,41 @@ handleError = error => {
 
 getPersonage();
 
+$(document).on('click', '.stars', function() {
+  let value = $(this).data('name');
+  getInfo(value);
+});
+
+
+getInfo = (value) => {
+  const infoStars = new XMLHttpRequest();
+  infoStars.onreadystatechange = function() {
+    if (infoStars.readyState === 4 && infoStars.status === 200) {
+      const dataInfo = JSON.parse(this.responseText);
+     
+      
+      infoStars.onload = info(dataInfo);
+      infoStars.onerror = handleError;
+    }
+  };
+  infoStars.open('GET', `https://swapi.co/api/people/${value}`);
+  infoStars.send();
+}
+
+function info(data){
+  
+  let name = $('.modal-title');
+  let gender = $('.gender');
+  let height = $('.height');
+  let bday = $('.birthday');
+  let eye = $('.eye');
+  let hair = $('.hair');
+  let films = $('.films')
+  name.text(data.name);
+  gender.text(data.gender);
+  height.text(data.height);
+  bday.text(data.birth_year);
+  eye.text(data.eye_color);
+  hair.text(data.hair_color);
+  films.text(data.films.length);
+}

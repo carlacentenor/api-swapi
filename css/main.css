@@ -44,3 +44,7 @@ h2{
   display: none;
 }
 
+.font-b{
+  color: var(--blue);
+  font-weight: 800;
+}
