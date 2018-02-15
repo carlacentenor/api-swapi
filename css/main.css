@@ -1,83 +1,80 @@
 @font-face {
-  font-family:starwars;
+  font-family: starwars;
   src: url('../assets/fonts/Starjedi.ttf');
 }
-h2{
+
+h2 {
   font-family: starwars;
   color: var(--blue);
 }
 
-.font-style{
+.font-style {
   font-family: starwars;
 }
 
-:root{
-  --blue : #264558;
-  --orange:#FDD326;
+:root {
+  --blue: #264558;
+  --orange: #FDD326;
 }
 
-.h100{
+.h100 {
   height: 100vh;
 }
 
-.w100{
+.w100 {
   width: 100%;
 }
 
-.w80{
+.w80 {
   width: 80%;
 }
 
-.w50{
+.w50 {
   width: 50%;
 }
 
-.gif{
-  
+.gif {
   width: 400px;
 }
 
-.bg-blue{
-  
+.bg-blue {
   background-color: #F4F8F9;
 }
 
-.font-8{
+.font-8 {
   font-weight: 800;
   border-bottom: 2px solid var(--blue);
   border-radius: 15px;
 }
 
-.btn-color{
+.btn-color {
   background-color: var(--orange);
   color: var(--blue);
 }
 
-.hide{
+.hide {
   display: none;
 }
 
-.font-b{
+.font-b {
   color: var(--blue);
   font-weight: 800;
 }
+
 .border-1 {
-  border:2px dotted orange;
+  border: 2px dotted orange;
 }
 
-.bg-blue2{
+.bg-blue2 {
   background-color: var(--blue);
 }
 
 @media only screen and (min-width: 960px) {
-
-.btn-color{
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.h50{
-  height: 50vh;
-}
-
+  .btn-color {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .h50 {
+    height: 50vh;
+  }
 }
