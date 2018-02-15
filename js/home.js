@@ -24,10 +24,11 @@ getPersonage = () => {
 
 addPersonage = (array) => {
   array.forEach((element,index) => {
+    
     const template = `
-    <div class="col-md-4 stars" data-name="${index+1}" data-toggle="modal" data-target="#exampleModal">
-    <p>${element.name}</p>
-    <img src="" name="${element.name}">
+    <div class="col-4 col-lg-2 p-0 stars" data-name="${index+1}" data-toggle="modal" data-target="#exampleModal">
+    
+    <img class ="w100" src="https://starwars-visualguide.com/assets/img/characters/${index+1}.jpg" name="${element.name}">
     </div>
     `;
     imagesBox.append(template);
@@ -55,7 +56,7 @@ getInfo = (value) => {
       const dataInfo = JSON.parse(this.responseText);
      
       
-      infoStars.onload = info(dataInfo);
+      infoStars.onload = info(dataInfo,value);
       infoStars.onerror = handleError;
     }
   };
@@ -63,7 +64,7 @@ getInfo = (value) => {
   infoStars.send();
 }
 
-function info(data){
+function info(data,value){
   
   let name = $('.modal-title');
   let gender = $('.gender');
@@ -71,7 +72,8 @@ function info(data){
   let bday = $('.birthday');
   let eye = $('.eye');
   let hair = $('.hair');
-  let films = $('.films')
+  let films = $('.films');
+  let photo = $('.star-photo');
   name.text(data.name);
   gender.text(data.gender);
   height.text(data.height);
@@ -79,4 +81,6 @@ function info(data){
   eye.text(data.eye_color);
   hair.text(data.hair_color);
   films.text(data.films.length);
+  photo.attr('src',`https://starwars-visualguide.com/assets/img/characters/${value}.jpg`)
 }
+

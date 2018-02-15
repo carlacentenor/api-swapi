@@ -9,98 +9,126 @@
     crossorigin="anonymous">
 
   <link rel="stylesheet" href="../css/main.css">
-  <title>Document</title>
+  <title>Star Wars</title>
 </head>
 
 <body class="bg-blue">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue2">
+        <a class="navbar-brand font-style" href="#">Star Wars</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Log Out</a>
+            </li>
+    
+        </div>
+      </nav>
 
-<div>
-  <figure class="text-center">
-    <img class="w80" src="../assets/images/r2.png" alt="r2">
-    <figcaption>
-      <h2>Personajes</h2>
-    </figcaption>
-  </figure>
-</div>  
 
+<div class="container mb-2">
+  <div class="row">
+    <div class="text-center col-12 col-lg-6 h50">
+      <img class="w80" src="../assets/images/r2.png" alt="r2">
+     </div>
+    <div class="col-12 col-lg-6 h50 d-flex align-items-center justify-content-center">
+      <div class="font-italic border-1 p-2 ">
+          <p>“Miedo, ira, agresividad, el lado oscuro ellos son. Si algún día rigen tu vida, para siempre tu destino dominarán.” (Yoda a Luke Skywalker. STAR WARS, episodio V, El Imperio Contrataca)</p>
+    
+      </div>
+      
+    </div>
+  </div>
+</div>
   <div class="container">
 
     <div class="row" id="images-box">
-     
+
     </div>
-    </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel"></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center mb-3">
+              <img class="star-photo w50 rounded"   alt="stars">
           </div>
-          <div class="modal-body">
-            <div class="container">
-              <div class="row">
-                <div class="col-6">
-                  <p class="font-b">Gender :</p>
-                </div>
-                <div class="col-6">
-                  <p class="gender"></p>
-                </div>
+         
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-6">
+                <p class="font-b">Gender :</p>
               </div>
-              <div class="row">
-                <div class="col-6">
-                  <p class="font-b">Height :</p>
-                </div>
-                <div class="col-6">
-                  <p class="height"></p>
-                </div>
+              <div class="col-6">
+                <p class="gender"></p>
               </div>
-              <div class="row">
-                <div class="col-6">
-                  <p class="font-b">Birthday :</p>
-                </div>
-                <div class="col-6">
-                  <p class="birthday"></p>
-                </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-6">
+                <p class="font-b">Height :</p>
               </div>
-              <div class="row">
-                <div class="col-6">
-                  <p class="font-b">Eye Color :</p>
-                </div>
-                <div class="col-6">
-                  <p class="eye"></p>
-                </div>
+              <div class="col-6">
+                <p class="height"></p>
               </div>
-              <div class="row">
-                <div class="col-6">
-                  <p class="font-b">Hair Color :</p>
-                </div>
-                <div class="col-6">
-                  <p class="hair"></p>
-                </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-6">
+                <p class="font-b">Birthday :</p>
               </div>
-              <div class="row">
-                <div class="col-6">
-                  <p class="font-b">Films :</p>
-                </div>
-                <div class="col-6">
-                  <p class="films"></p>
-                </div>
+              <div class="col-6">
+                <p class="birthday"></p>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-6">
+                <p class="font-b">Eye Color :</p>
+              </div>
+              <div class="col-6">
+                <p class="eye"></p>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-6">
+                <p class="font-b">Hair Color :</p>
+              </div>
+              <div class="col-6">
+                <p class="hair"></p>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-6">
+                <p class="font-b">Films :</p>
+              </div>
+              <div class="col-6">
+                <p class="films"></p>
               </div>
             </div>
           </div>
-          
         </div>
+
       </div>
     </div>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
-      <script src="../js/data.js"></script>
-    <script src="../js/home.js"></script>
+  </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/home.js"></script>
 </body>
 
 </html>

@@ -7,6 +7,10 @@ h2{
   color: var(--blue);
 }
 
+.font-style{
+  font-family: starwars;
+}
+
 :root{
   --blue : #264558;
   --orange:#FDD326;
@@ -22,6 +26,15 @@ h2{
 
 .w80{
   width: 80%;
+}
+
+.w50{
+  width: 50%;
+}
+
+.gif{
+  
+  width: 400px;
 }
 
 .bg-blue{
@@ -47,4 +60,24 @@ h2{
 .font-b{
   color: var(--blue);
   font-weight: 800;
+}
+.border-1 {
+  border:2px dotted orange;
+}
+
+.bg-blue2{
+  background-color: var(--blue);
+}
+
+@media only screen and (min-width: 960px) {
+
+.btn-color{
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.h50{
+  height: 50vh;
+}
+
 }
