@@ -24,6 +24,7 @@ getPersonage = () => {
 
 addPersonage = (limit) => {
   for (let i = 0 ; i < limit ; i++) {
+    if (i === 16) continue;
     const template = `
   <div class="col-4 col-lg-2 p-0 stars" data-name="${i + 1}" data-toggle="modal" data-target="#exampleModal">
   
