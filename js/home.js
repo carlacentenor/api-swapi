@@ -12,9 +12,9 @@ getPersonage = () => {
     if (personageStar.readyState === 4 && personageStar.status === 200) {
       const data = JSON.parse(this.responseText);
       let dataArray = data.results;
-
+      let limit = data.count;
       resultLength = data.results.length;
-      personageStar.onload = addPersonage(dataArray);
+      personageStar.onload = addPersonage(limit);
       personageStar.onerror = handleError;
     }
   };
@@ -22,16 +22,16 @@ getPersonage = () => {
   personageStar.send();
 };
 
-addPersonage = (array) => {
-  array.forEach((element, index) => {
+addPersonage = (limit) => {
+  for (let i = 0 ; i < limit ; i++) {
     const template = `
-    <div class="col-4 col-lg-2 p-0 stars" data-name="${index + 1}" data-toggle="modal" data-target="#exampleModal">
-    
-    <img class ="w100" src="https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg" name="${element.name}">
-    </div>
-    `;
+  <div class="col-4 col-lg-2 p-0 stars" data-name="${i + 1}" data-toggle="modal" data-target="#exampleModal">
+  
+  <img class ="w100" src="https://starwars-visualguide.com/assets/img/characters/${i + 1}.jpg" name="">
+  </div>
+  `;
     imagesBox.append(template);
-  });
+  }
 };
 
 
